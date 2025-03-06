@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HW3</title>
+    </head>
+    <body>
+        <h1>Enter a name.</h1>
+    <form id="nameForm">
+        <label for="name">Integer:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="button" onclick="getNames()">Submit</button>
+        <p id="names"></p>
+    </form>
+
+    <script>
+        var array = [];
+        function getNames(){
+            array.push(document.getElementById("name").value);
+            array.sort();
+            document.getElementById("names").innerHTML = array.join("<br> ");
+        }
+    </script>
+    </body>
+</html>
